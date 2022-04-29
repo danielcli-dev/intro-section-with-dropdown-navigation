@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./index.css" />
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="overlay"></div>
+      <img class="header__logo" src="./images/logo.svg" alt="snap logo" />
+
+      <img
+        onclick="handleMenu('header','open')"
+        class="header__hamburgerOpen hide-for-desktop"
+        src="./images/icon-menu.svg"
+        alt="open nav"
+      />
+
+      <nav class="header__nav mobile">
+        <div class="header__hamburgerContainer hide-for-desktop">
+          <img
+            onclick="handleMenu('header','close')"
+            class="header__hamburgerClose"
+            src="images/icon-close-menu.svg"
+            alt="close nav"
+          />
+        </div>
+
+        <div class="header__navLinks">
+          <div
+            id="features"
+            onclick="handleMenu('features', 'toggle')"
+            class="header__navLink"
+          >
+            Features
+            <img src="images/icon-arrow-down.svg" alt="feature open" />
+
+            <div class="header__featureContainer">
+              <div class="header__feature">
+                <img src="images/icon-todo.svg" alt="" />
+                Todo List
+              </div>
+              <div class="header__feature">
+                <img src="images/icon-calendar.svg" alt="" /> Calendar
+              </div>
+              <div class="header__feature">
+                <img src="images/icon-reminders.svg" alt="" /> Reminders
+              </div>
+              <div class="header__feature">
+                <img src="images/icon-planning.svg" alt="" /> Planning
+              </div>
+            </div>
+          </div>
+
+          <di
+            id="company"
+            onclick="handleMenu('company', 'toggle')"
+            class="header__navLink"
+          >
+            Company <img src="images/icon-arrow-down.svg" alt="company open" />
+            <div class="header__featureContainer">
+              <div class="header__feature">History</div>
+              <div class="header__feature">Our Team</div>
+              <div class="header__feature">Blog</div>
+            </div>
+          </di
+          v>
+          <div href="#" class="header__navLink">Careers</div>
+          <div href="#" class="header__navLink">About</div>
+        </div>
+        <div class="header__right">
+          <a class="header__login">Login</a>
+          <button class="header__register">Register</button>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero__image">
+
+      </div>
+     
+        <div class="hero__textContainer">
+          <div class="hero__text">
+            <h1>Make remote work</h1>
+              <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+              </p>
+            <button class="hero__cta">Learn more</button>
+          </div>
+        
+      <div class="footer">
+        <img
+          class="databiz__logo"
+          src="images/client-databiz.svg"
+          alt="databiz logo"
+        />
+        <img
+          class="audiophile__logo"
+          src="images/client-audiophile.svg"
+          alt="audiophile logo"
+        />
+        <img class="meet__logo" src="images/client-meet.svg" alt="meet logo" />
+        <img class="maker__logo" src="images/client-maker.svg" alt="maker logo" />
+      </div>
+    </div>
+    </section>
+
+   
+    <!-- Features Company Careers About Login Register Make remote work Get your team
+    in sync, no matter your location. Streamline processes, create team rituals,
+    and watch productivity soar. Learn more -->
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+
+  <script>
+    const handleMenu = (id, state) => {
+      let v = document.getElementById(id);
+      if (state == "open") {
+        v.classList.add("open");
+      } else if (state == "toggle") {
+        v.classList.toggle("open");
+      } else {
+        v.classList.remove("open");
+      }
+    };
+  </script>
+</html>
